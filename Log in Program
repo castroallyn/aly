@@ -1,0 +1,17 @@
+Public Class Form2
+    Dim b As Integer = 0
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        If UsernameTextField.Text = My.Settings.Username Then
+            b += 1
+        End If
+        If PasswordTextField.Text = My.Settings.Password Then
+            b += 1
+        End If
+        If b = 2 Then
+            MsgBox("Login Successful", MsgBoxStyle.Information)
+        Else
+            MsgBox("Save", MsgBoxStyle.Exclamation)
+        End If
+    End Sub
+End Class
